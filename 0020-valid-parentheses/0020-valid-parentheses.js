@@ -12,12 +12,13 @@ var isValid = function(s) {
 
     for(let i = 0; i < s.length; i++){
         let char = s[i];
-        
         if(pairs[char]){
             stack.push(char);
         } else {
             let top = stack.pop();
             if(pairs[top] !== char){
+              console.log(pairs[top])
+              console.log(char)
                 return false;
             }
         }
