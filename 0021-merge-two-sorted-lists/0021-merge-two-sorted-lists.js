@@ -10,13 +10,17 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-var mergeTwoLists = function(li1, li2) {
-    const newArr = {}
-    if(!li1 || !li2) return li1 || li2
-    if(li1.val < li2.val){
-        li1.next = mergeTwoLists(li1.next, li2)
-        return li1
+var mergeTwoLists = function(list1, list2) {
+    
+    if(!list1) return list2
+    if(!list2) return list1
+    
+    if(list1.val <= list2.val){
+        list1.next = mergeTwoLists(list1.next, list2);
+        return list1
+    }else {
+        list2.next = mergeTwoLists(list1, list2.next)
+        return list2
     }
-    li2.next = mergeTwoLists(li1, li2.next)
-    return li2
+    
 };
