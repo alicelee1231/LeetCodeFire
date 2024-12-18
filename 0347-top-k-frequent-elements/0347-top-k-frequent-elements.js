@@ -16,7 +16,6 @@ var topKFrequent = function(nums, k) {
     let answer = [...b.entries()]
     .sort((a, b) => b[1] - a[1])
     .map((num) => num[0]);
-        console.log(answer)
 
     let result = answer.slice(0, k )
     return result
