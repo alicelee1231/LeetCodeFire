@@ -10,7 +10,7 @@ var shortestDistance = function(wd, word1, word2) {
     let idx1 = -1; // word1의 인덱스 저장
     let idx2 = -1; // word2의 인덱스 저장
     let minDistance = Infinity; // 최소 거리 초기화
-
+    console.log(minDistance)
     for (let i = 0; i < wd.length; i++) {
         if (wd[i] === word1) {
             idx1 = i;
