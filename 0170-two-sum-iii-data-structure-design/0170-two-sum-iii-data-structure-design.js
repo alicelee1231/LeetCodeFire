@@ -19,12 +19,12 @@ TwoSum.prototype.find = function(value) {
     let a = this.numbers
     
     const numSet = new Set()
-    for(const num of a){
-        const complemet = value - num
-        if(numSet.has(complemet)){
+    for(let i = 0; i< a.length; i++){
+        const complement = value - a[i]
+        if(numSet.has(complement)){
             return true
         }
-        numSet.add(num)
+        numSet.add(a[i])
     }
     return false
 };
