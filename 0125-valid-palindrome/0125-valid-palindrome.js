@@ -3,22 +3,19 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-    let b = []
-    let a = s.toLowerCase()
-    for(let i = 0; i< s.length; i++){
-        if(a[i].charCodeAt(0) >= 97 && a[i].charCodeAt(0) <= 122){
-            b.push(a[i])
-        }else if( a[i].charCodeAt(0) >= 48 && a[i].charCodeAt(0) <= 57) {
-            b.push(a[i])
-        }
-    }
-    console.log(b)
-    for(let i = 0 ; i< b.length; i++){
-        if(b[i] !== b[b.length - 1 -i]){
+    s = s.toLowerCase()
+    let a = s.split(" ").join('')
+    let x = a.replace(/[^a-zA-Z0-9 ]/g, "")
+    console.log(x)
+    if(x.length === 0 || x.length === 1) return true
+    let y = 1
+    for(let i = 0; i < Math.floor(x.length / 2); i++){
+        if(x[i] != x[x.length - y]){
             return false
-        }else if(b[i] === b[b.length - 1 -i]){
+        }else if(x[i] === x[x.length - y]){
+            y++
             continue
         }
-        }
-        return true
-    };
+    }
+    return true
+};
