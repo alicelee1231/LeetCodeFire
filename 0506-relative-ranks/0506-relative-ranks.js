@@ -11,11 +11,7 @@ var findRelativeRanks = function(score) {
         return b - a
     })
     for(let i = 0; i < score.length; i++){
-        if(a[i] !== undefined){
-            b.set(x[i], a[i])
-        }else{
-            b.set(x[i], (i+1).toString())
-        }
+            b.set(x[i], a[i] !== undefined ? a[i] : (i+1).toString())
     }
     for(let i = 0 ;  i< x.length; i++){
         result.push(b.get(score[i]))
