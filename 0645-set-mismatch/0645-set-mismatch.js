@@ -6,7 +6,7 @@ var findErrorNums = function(nums) {
     let n = nums.length
     let dup
     let missing
-    let x = new Array( n + 1).fill(false)
+    let x = new Array(n+1).fill(false)
     for(let num of nums){
         if(x[num]){
             dup = num
@@ -22,6 +22,7 @@ var findErrorNums = function(nums) {
         }
     }
     return [dup, missing]
+    
 };
 
 
