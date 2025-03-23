@@ -13,8 +13,7 @@ var kidsWithCandies = function(candies, extraCandies) {
     }
 
     candies.sort(function(a, b){return b - a})
-    console.log(candies)
-    console.log(newA)
+  
     //compare
     for(let i = 0;  i < newA.length; i++){
         if(candies[0] <= newA[i]){
