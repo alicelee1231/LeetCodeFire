@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/number-of-1-bits/">191. Number of 1 Bits</a></h2><h3>Easy</h3><hr><div><p>Given a positive integer <code>n</code>, write a function that returns the number of <span data-keyword="set-bit">set bits</span> in its binary representation (also known as the <a href="http://en.wikipedia.org/wiki/Hamming_weight" target="_blank">Hamming weight</a>).</p>
+<h2><a href="https://leetcode.com/problems/number-of-1-bits">191. Number of 1 Bits</a></h2><h3>Easy</h3><hr><p>Given a positive integer <code>n</code>, write a function that returns the number of <span data-keyword="set-bit">set bits</span> in its binary representation (also known as the <a href="http://en.wikipedia.org/wiki/Hamming_weight" target="_blank">Hamming weight</a>).</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
@@ -45,4 +45,4 @@
 </ul>
 
 <p>&nbsp;</p>
-<strong>Follow up:</strong> If this function is called many times, how would you optimize it?</div>
+<strong>Follow up:</strong> If this function is called many times, how would you optimize it?
