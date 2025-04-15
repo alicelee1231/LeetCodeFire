@@ -3,19 +3,18 @@
  * @return {number}
  */
 var hammingWeight = function(n) {
-
-// 2로나누고 그 나머지 값
-let a = []
-let result = 0
-while(n !== 0){
-    let x = n % 2
-    a.push(x)
-    n = Math.floor(n / 2)
-}
-    for(let i = 0;  i < a.length; i++){
-        if(a[i] === 1){
-            result++
-        }
+   
+    let result = []
+    let done = 0
+    let a = n
+    while(a > 0){
+        result.push(Math.floor(a % 2))
+        a = Math.floor(a / 2)
     }
-    return result
+    for(let i = 0; i<result.length; i++){
+        done += result[i]
+    }
+    
+    return done
 };
+
