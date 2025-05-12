@@ -9,6 +9,5 @@ var searchInsert = function(nums, target) {
     const a = nums.sort(function(a,b){
         return a - b
     })
-    console.log(a)
     return a.indexOf(target) 
 };
