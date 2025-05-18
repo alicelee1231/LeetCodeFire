@@ -3,11 +3,11 @@
  * @return {number[]}
  */
 var plusOne = function(digits) {
-    let a = []
-    let s = BigInt(digits.join('')) + 1n
-    let result = s.toString()
-    for(let i = 0; i < result.length; i++){
-        a.push(Number(result[i]))
+    const a = BigInt(digits.join('')) + 1n
+    const b = a + ''
+    const result = []
+    for(let i = 0; i < b.length; i++){
+        result.push(Number(b[i]))
     }
-    return a
+    return result
 };
