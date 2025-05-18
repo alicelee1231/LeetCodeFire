@@ -4,6 +4,7 @@
  * @return {number}
  */
 var strStr = function(haystack, needle) {
-    let index = haystack.indexOf(needle);
-    return index != null ? index : -1;
+    if(haystack.includes(needle)){
+        return haystack.indexOf(needle)
+    }else return -1
 };
