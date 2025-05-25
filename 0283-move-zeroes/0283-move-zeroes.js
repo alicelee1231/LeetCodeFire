@@ -3,15 +3,18 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    let a = 0; // 0이 아닌 값을 넣을 위치를 가리킴
+    let insertPos = 0;
+    
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] !== 0) {
-            nums[a] = nums[i]; 
-            if (i !== a) {
-                nums[i] = 0; 
-            }
-            a++;
+            nums[insertPos] = nums[i];
+            insertPos++;
         }
     }
-    console.log(nums);
+    
+    for (let i = insertPos; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+
+    return nums;
 };
