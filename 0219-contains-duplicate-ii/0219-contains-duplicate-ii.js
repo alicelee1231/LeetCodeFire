@@ -4,13 +4,12 @@
  * @return {boolean}
  */
 var containsNearbyDuplicate = function(nums, k) {
-
-    let obj = {}
-    for(let i = 0; i < nums.length; i++){
-            if(obj[nums[i]] !== undefined && i - obj[nums[i]] <= k){
-                return true
-            }
-        obj[nums[i]] = i
+    const map = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
+            return true;
         }
-    return false
+        map.set(nums[i], i); // 최신 인덱스로 갱신
+    }
+    return false;
 };
