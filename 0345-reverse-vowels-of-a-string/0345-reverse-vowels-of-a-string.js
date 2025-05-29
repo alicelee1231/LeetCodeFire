@@ -14,8 +14,6 @@ var reverseVowels = function(s) {
             b[i] = s[i]
         }
     }
-                console.log(b)
-
     let x = 0
     for(let i = 0; i < b.length; i++){
         if(b[i] === '*'){
