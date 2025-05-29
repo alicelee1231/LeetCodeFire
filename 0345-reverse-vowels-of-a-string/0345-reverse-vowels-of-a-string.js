@@ -3,24 +3,25 @@
  * @return {string}
  */
 var reverseVowels = function(s) {
-    // first, I need to check
-    let a = "aeiouAEIOU"
-    let c = []
-    let d = s.split('')
-
-    for(let i = 0; i < s.length + 1; i++){
-        if(a.includes(s[s.length - i])){
-            c.push(s[s.length - i])
+    let a  = []
+    let y = ['a','A','e','E','i','I','o','O','u','U']
+    let b = s.split('')
+    for(let i = s.length - 1; i >= 0; i--){
+        if(y.indexOf(s[i]) !== -1){
+            a.push(s[i])
+            b[i] = '0'
+        }else{
+            b[i] = s[i]
         }
     }
-    let z = 0
-    for(let i = 0; i < s.length; i++){
-        if(a.includes(s[i])){
-            d[i] = c[z]
-            z++
+                console.log(a)
+
+    let x = 0
+    for(let i = 0; i < b.length; i++){
+        if(b[i] === '0'){
+            b[i] = a[x]
+            x++
         }
     }
-           return d.join('')
-
+    return b.join('')
 };
-
