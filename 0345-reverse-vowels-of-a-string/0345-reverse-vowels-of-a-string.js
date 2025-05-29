@@ -9,16 +9,16 @@ var reverseVowels = function(s) {
     for(let i = s.length - 1; i >= 0; i--){
         if(y.indexOf(s[i]) !== -1){
             a.push(s[i])
-            b[i] = '0'
-        }else{
+            b[i] = '*'
+        }else if(y.indexOf(s[i]) === -1){
             b[i] = s[i]
         }
     }
-                console.log(a)
+                console.log(b)
 
     let x = 0
     for(let i = 0; i < b.length; i++){
-        if(b[i] === '0'){
+        if(b[i] === '*'){
             b[i] = a[x]
             x++
         }
